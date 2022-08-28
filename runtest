@@ -1,0 +1,4 @@
+#!/bin/bash
+gcc -o cat cat.c
+diff <(cat cat.c) cat.c
+echo Done
