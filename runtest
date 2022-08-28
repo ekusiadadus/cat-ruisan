@@ -1,4 +1,8 @@
 #!/bin/bash
+set -e
 gcc -o cat cat.c
 diff <(cat cat.c) cat.c
-echo Done
+diff <(cat < cat.c) cat.c
+diff <(cat cat) cat.c || true
+diff <(cat < cat) cat.c || true
+echo Success
