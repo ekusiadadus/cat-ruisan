@@ -29,7 +29,7 @@ int main(int argc, char **argv){
     }
   }
 
-  while((nread = read(0,  buf, sizeof(buf))) > 0)
+  while((nread = read(fd,  buf, sizeof(buf))) > 0)
     write(1, buf, nread);
   return 0;
 
